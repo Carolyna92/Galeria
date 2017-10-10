@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Galeria"
+             xmlns:forms="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
+             x:Class="Galeria.MainPage"
+             BackgroundColor="Black"
+             Padding="15"
+             Title="Galeria">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+         <RowDefinition Height="Auto" ></RowDefinition>
+         <RowDefinition Height="3*" ></RowDefinition> 
+         <RowDefinition Height="Auto" ></RowDefinition>
+         <RowDefinition Height="*" ></RowDefinition>
+         <RowDefinition Height="Auto" ></RowDefinition>
+         <RowDefinition Height="Auto" ></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Text="Galeria" Grid.Row="0" BackgroundColor="Black" Grid.Column="0" Grid.ColumnSpan="4" FontSize="Medium" TextColor="White" ></Label>
+        <Image x:Name="Imagen1" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4"></Image>
+        <Button x:Name="Me_gusta" Image="like_11.png" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Clicked="MeGusta_Clicked_1" BorderColor="Aqua" BackgroundColor="White"></Button>
+        <Button x:Name="No_megusta" Image="dislike11.png" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Clicked="NoMeGusta_Clicked" BorderColor="Aqua" BackgroundColor="White"></Button>
+        <StackLayout Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2">
+         <forms:CarouselView x:Name="Linea" ItemSelected="Linea_ItemSelected">
+         <forms:CarouselView.ItemTemplate>
+         <DataTemplate>
+         <Image Source="{ Binding .}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></Image>           
+         </DataTemplate>           
+         </forms:CarouselView.ItemTemplate>
+         </forms:CarouselView>
+         </StackLayout>
+        <Label x:Name="Direccion" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4" TextColor="White"></Label>
+        <Button x:Name="Navegar" Text="Embebidas" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"   Clicked="Navegar_Clicked" BackgroundColor="Aqua" TextColor="White"></Button>   
+    </Grid>
+</ContentPage>
+    
+    

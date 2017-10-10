@@ -1,0 +1,15 @@
+﻿<Application
+    x:Class="Galeria.UWP.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Galeria.UWP"
+    xmlns:uwp="using:Xamarin.Forms.Platform"
+    xmlns:platform="using:Xamarin.Forms.Platform"
+    RequestedTheme="Light">
+    <Application.Resources>
+        <DataTemplate x:Key="ItemTemplate">
+            <uwp:ItemControl HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"></uwp:ItemControl>
+        </DataTemplate>
+    </Application.Resources>
+
+</Application>
